@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>E-Profound - jQuery Track Changes Plugin</title>
+        <script src="js/jquery.min.js"></script>
+        <script src="js/jquery.form_input_map.plugin.js"></script>
+        <style type="text/css">
+          .row {
+            padding: 3px 10px 3px 10px;
+          }
+
+        </style>
+<script type="text/javascript">
+    $(document).ready( function($) {
+      $('form[name=\'ftest\']').form_input_map();
+	  });
+</script>        
+    </head>
+    <body>
+             
+      <form name="ftest" id="ftest">
+        <div class="row">
+         <input type="checkbox" name="test_1" id="test_1" value="1">  <label for="test_1">Check 1</label>
+        </div>
+        <div class="row">
+         <input type="checkbox" name="test_2" id="test_2" value="1">  <label for="test_2">Check 2</label>
+        </div>
+        <div class="row">
+         <input type="checkbox" name="test_3" id="test_3" value="1">  <label for="test_3">Check 3</label>
+        </div>
+        <div class="row">
+         <input type="checkbox" name="test_4" id="test_4" value="1">  <label for="test_4">Check 4</label>
+        </div>
+        <div class="row">
+         <input type="checkbox" name="test_5" id="test_5" value="1">  <label for="test_5">Check 5</label>
+        </div>
+        <div class="row">
+         <input type="checkbox" name="test_6" id="test_6" value="1">  <label for="test_6">Check 6</label>
+        </div>
+      </form>
+        
+    </body>
+</html>
