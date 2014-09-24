@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>E-Profound - jQuery Track Changes Plugin</title>
+        <script src="js/jquery.min.js"></script>
+        <script src="js/jquery.form_file_input_map.js"></script>
+
+        <style type="text/css">
+          .row {
+            padding: 3px 10px 3px 10px;
+          }
+
+        </style>
+<script type="text/javascript">
+    $(document).ready( function($) {
+        $('form[name=\'upload_form_1\']').form_file_input_map({
+    			replace_input            : '<img src="image/upload.png" alt="upload.png, 2,1kB" title="upload" height="64" width="64">',
+    			attach_file_selector     : '#attach_1',
+    			file_tag_prefix          : '<a href="javascript:void(0);">',
+    			file_tag_suffix          : '<span><img src="image/delete-icon.gif" ></span></a>',
+          multiple:true
+        });
+        
+
+        $('form[name=\'upload_form_2\']').form_file_input_map({
+    			replace_input            : '<img src="image/upload.png" alt="upload.png, 2,1kB" title="upload" height="64" width="64">',
+    			attach_file_selector     : '#attach_4',
+    			file_tag_prefix          : '<a href="javascript:void(0);">',
+    			file_tag_suffix          : '<span><img src="image/delete-icon.gif" ></span></a>',
+          multiple:true,
+          clone_selector:true
+        });
+
+        $('form[name=\'upload_form_4\']').form_file_input_map({
+    			replace_input            : '<img src="image/upload.png" alt="upload.png, 2,1kB" title="upload" height="64" width="64">',
+    			attach_file_selector     : '#attach_5',
+    			file_tag_prefix          : '<a href="javascript:void(0);">',
+    			file_tag_suffix          : '<span><img src="image/delete-icon.gif" ></span></a>',
+          multiple:true,
+          clone_selector:true
+        });
+
+
+        $('form[name=\'upload_form_5\']').form_file_input_map([
+        {
+    			file_input_name          : 'image_more_upload',
+    			replace_input            : '<img src="image/upload.png" alt="upload.png, 2,1kB" title="upload" height="64" width="64">',
+    			attach_file_selector     : '#attach_2',
+    			file_tag_prefix          : '<a href="javascript:void(0);">',
+    			file_tag_suffix          : '<span><img src="image/delete-icon.gif" ></span></a>',
+    			clone_selector           : true
+        },
+        {
+    			file_input_name          : 'image_more_upload_ala',
+    			replace_input            : null,
+    			attach_file_selector     : '#attach_3',
+    			file_tag_prefix          : '<a href="javascript:void(0);">',
+    			file_tag_suffix          : '<span><img src="image/delete-icon.gif" ></span></a>',
+    			multiple                 : true,
+    			clone_selector           : false
+        }]);
+	  });
+    
+</script>        
+    </head>
+    <body>
+      <form name="upload_form_1" id="upload_form_1" formenctype="multipart/form-data">
+        <div class="row">
+         <input type="text" name="test_1" id="test_1" value=" "> 
+        </div>
+        <div class="row">
+         <input type="file" name="image_upload" id="image_upload" value=""> 
+        </div>
+        <div class="row" id="attach_1"></div>
+        </div>
+      </form>
+      <hr>
+      <form name="upload_form_2" id="upload_form_2" formenctype="multipart/form-data">
+        <div class="row">
+         <input type="text" name="test_2" id="test_2" value=" "> 
+        </div>
+        <div class="row">
+         <input type="file" name="image_upload_clone" id="image_upload_clone" value=""> 
+        </div>
+        <div class="row" id="attach_4"></div>
+
+      </form>
+      <hr>
+      <form name="upload_form_3" id="upload_form_3" formenctype="multipart/form-data">
+        <div class="row">
+         <input type="text" name="test_3" id="test_3" value=" "> 
+        </div>
+        <div class="row">
+         <input type="file" name="image_upload_multi" id="image_upload_multi" multiple = "multiple" value=""> 
+        </div>
+      </form>
+
+      <hr>
+      <form name="upload_form_4" id="upload_form_4" formenctype="multipart/form-data">
+        <div class="row">
+         <input type="text" name="test_4" id="test_4" value=" "> 
+        </div>
+        <div class="row">
+         <input type="file" name="multi_upload[]" id="multi_upload" value=""> 
+        </div>
+        <div class="row" id="attach_5"></div>
+      </form>
+      <hr>
+      <form name="upload_form_5" id="upload_form_5" formenctype="multipart/form-data">
+        <div class="row">
+         <input type="text" name="test_5" id="test_5" value=" "> 
+        </div>
+        <div class="row">
+         <input type="file" name="image_more_upload" id="image_more_upload" value=""> 
+        <div class="row" id="attach_2"></div>
+        </div>
+        <div class="row">
+         <input type="file" name="image_more_upload_ala" id="image_more_upload_ala" value=""> 
+        <div class="row" id="attach_3"></div>
+        </div>
+      </form>
+          
+          
+    </body>
+</html>
