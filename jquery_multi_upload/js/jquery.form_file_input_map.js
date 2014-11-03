@@ -9,7 +9,7 @@
  */
 
 (function($) {
-
+  
 	$.fn.form_file_input_map = function( options ) {
 		var settings = $.extend({
 			file_input_name          : null,
@@ -18,11 +18,11 @@
 			file_tag_prefix          : null,
 			file_tag_suffix          : null,
 			multiple                 : false,
-			clone_selector           : false,
-			complete                 : null
+			clone_selector           : false
 		}, options);
 
     var self = this;
+    this.files = [];
     
     this.init = function () {
       if(typeof(settings[0]) != 'undefined') {
@@ -177,6 +177,7 @@
       });
     };
     
+
 		return this.each( function() {
       if (jQuery(this).prop("tagName").toLowerCase() != 'form') {
         alert('Form File Input Map plugin, can be attached only to the form tag!');

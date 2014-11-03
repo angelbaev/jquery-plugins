@@ -234,7 +234,7 @@
                      * @param	string
                      * @return	bool
                      */
-                    this.phone = function(str) {
+                    this.phone_number = function(str) {
                         return (!str.match(/^[2-9]\d{2}-\d{3}-\d{4}$/)?false:true);
                     }
 
